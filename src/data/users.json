@@ -1,0 +1,14 @@
+[
+  {
+    "username": "new_user",
+    "password": "$2a$10$656X8Pvxw9RdYy/heYI4XuaBX/Aqui5a.zhldLGM3CrBrqPgCe5zy"
+  },
+  {
+    "username": "new_user2",
+    "password": "$2a$10$OM16Ot1f4r9l0V9CapMBSOWUgctrLWmhGJWrq18GL4kBqVFdDoXj6"
+  },
+  {
+    "username": "new_user3",
+    "password": "$2a$10$YQQ6dqZz94rvepAUuYke7.yVikC3/RfqKvkO2v/lxzz0yzdSAq9mm"
+  }
+]
