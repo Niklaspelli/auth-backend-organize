@@ -1,23 +1,24 @@
-const express = require("express");
-const app = express();
 const authRoutes = require("./routes/authRoutes");
-const helmet = require("helmet");
-const rateLimit = require("express-rate-limit");
+const {
+  PORT,
+  AUTH,
+  AUTH_TYPES,
+  HTTP_ONLY,
+  SECURE,
+  SAME_SITE,
+} = require("./config.js");
 
-app.use(express.json());
-app.use(helmet());
+const app = require("./app.js");
 
-const limiter = rateLimit({
-  windows: 15 * 60 * 1000,
-  max: 100,
-});
-app.use(limiter);
-
-app.use("/", authRoutes);
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, (err) => {
+  if (err) {
+    console.log(`Failed to start the server ${err}`);
+  }
   console.log(`server running on port ${PORT}`);
+  console.log(`Using ${AUTH} authentication`);
+  console.log(`HTTPOnly is ${HTTP_ONLY}`);
+  console.log(`Secure is ${SECURE}!`);
+  console.log(`Same site is ${SAME_SITE}`);
 });
 
 /////
