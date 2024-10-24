@@ -1,11 +1,20 @@
 const express = require("express");
 const helmet = require("helmet");
+const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const app = express();
 const { AUTH, AUTH_TYPES } = require("./config");
 const authRoutes = {
   [AUTH_TYPES.BASIC]: require("./routes/authRoutes"),
 };
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Allow requests from this origin
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    credentials: true, // Allow cookies to be sent
+  })
+);
 
 const limiter = rateLimit({
   windows: 15 * 60 * 1000,

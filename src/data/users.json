@@ -1,18 +1,10 @@
 [
   {
-    "username": "new_user",
-    "password": "$2a$10$656X8Pvxw9RdYy/heYI4XuaBX/Aqui5a.zhldLGM3CrBrqPgCe5zy"
-  },
-  {
-    "username": "new_user2",
-    "password": "$2a$10$OM16Ot1f4r9l0V9CapMBSOWUgctrLWmhGJWrq18GL4kBqVFdDoXj6"
-  },
-  {
-    "username": "new_user3",
-    "password": "$2a$10$YQQ6dqZz94rvepAUuYke7.yVikC3/RfqKvkO2v/lxzz0yzdSAq9mm"
-  },
-  {
     "username": "Niklas1",
     "password": "$2a$10$GZbyMq1uMD1kw5fF3oD6zemRhg6IyH.M9UtzymQtmilk3qp1gWJPW"
+  },
+  {
+    "username": "Niklas2",
+    "password": "$2a$10$bMqTp1.p7lrHXK5ARLhoFucId3EJtC/1h3NAY0wV.2g7EMiuBe492"
   }
 ]

@@ -77,8 +77,22 @@ exports.login = async (req, res) => {
 };
 
 exports.logout = (req, res) => {
-  res.status(200).send("Logout successful");
+  res.clearCookie("accessToken", {
+    httpOnly: true,
+    sameSite: "Strict",
+    secure: true,
+  });
+  res.clearCookie("refreshToken", {
+    httpOnly: true,
+    sameSite: "Strict",
+    secure: true,
+  });
+  return res.status(200).json({ message: "Logout successful" });
 };
+
+/* exports.logout = (req, res) => {
+  res.status(200).send("Logout successful");
+}; */
 
 exports.basicLogin = (req, res) => {
   res.status(200).send("Basic login successful");
