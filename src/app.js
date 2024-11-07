@@ -25,6 +25,9 @@ app.use(limiter);
 app.use(express.json());
 app.use(helmet());
 
+const { handleHealthCheck } = require("@kunalnagarco/healthie");
+app.use(handleHealthCheck());
+
 app.use("/api/auth", authRoutes[AUTH_TYPES.BASIC]);
 app.use((req, res) => res.status(404).send("Not Foundz"));
 
