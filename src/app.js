@@ -10,7 +10,7 @@ const authRoutes = {
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from this origin
+    origin: "http://localhost:5000", // Allow requests from this origin
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     credentials: true, // Allow cookies to be sent
   })
